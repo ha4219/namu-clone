@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
       sx={{ bgcolor: theme.palette.background.paper, paddingY: 5 }}
       maxWidth="md"
     >
-      <ProfileBox url={data.file.publicURL} />
+      <ProfileBox url={`/namu-clone/${data.file.publicURL}`} />
       <Typography variant="title">
         <TagLink href="#1">1.</TagLink>
         개요
