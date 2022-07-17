@@ -1,10 +1,18 @@
-import { Container, Typography, useTheme, Collapse, Grid } from '@mui/material';
+import {
+  Container,
+  Typography,
+  useTheme,
+  Collapse,
+  Grid,
+  Box,
+} from '@mui/material';
 import * as React from 'react';
 import CustomLink from '../components/CustomLink';
 import TopTagLink from '../components/TopTagLink';
 import TagLink from '../components/TagLink';
 import ProfileBox from '../components/profile/ProfileBox';
 import { graphql } from 'gatsby';
+import styled from '@emotion/styled';
 
 const IndexPage = ({ data }) => {
   console.log(data);
@@ -15,8 +23,11 @@ const IndexPage = ({ data }) => {
       sx={{ bgcolor: theme.palette.background.paper, paddingY: 5 }}
       maxWidth="md"
     >
-      <Grid container>
-        <Grid item xs={12}>
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={6}>
+          <CustomIndexWrapper></CustomIndexWrapper>
+        </Grid>
+        <Grid item xs={12} md={6}>
           <ProfileBox url={`${data.file.publicURL}`} />
         </Grid>
       </Grid>
@@ -25,7 +36,9 @@ const IndexPage = ({ data }) => {
         개요
       </Typography>
       <Collapse in={true}>
-        <Typography variant="content"></Typography>
+        <Typography variant="content">
+          놀자놀자 원탑, 노상철 그는 사람인가?
+        </Typography>
       </Collapse>
       <Typography variant="title">
         <TagLink href="#2">2.</TagLink>
@@ -44,17 +57,23 @@ const IndexPage = ({ data }) => {
         </Collapse>
         <Typography variant="titleSub">
           <TagLink href="#2.2">2.2.</TagLink>
-          여성설
+          일본 여행 중 실종
         </Typography>
         <Collapse in={true}>
-          <Typography variant="content">123123</Typography>
+          <Typography variant="content">
+            여행 중 컨디션이 좋지 않다고 놀자놀자 친구들을 속인 뒤 금일 낮에
+            홍등가에서 유흥을 즐겼다는 것으로 추측
+          </Typography>
         </Collapse>
         <Typography variant="titleSub">
-          <TagLink href="#2.3">2.3.</TagLink>
-          하남자설
+          <TagLink href="#2.3">2.3.</TagLink>별 보러 갈래?
         </Typography>
         <Collapse in={true}>
-          <Typography variant="content">123123</Typography>
+          <Typography variant="content">
+            2021년 10월 14일, 김경빈과 같이 게임을 하기로 약속했지만, 뒤에
+            여자친구가 별 보러 가자는 소리에 헐레벌떡 뛰어나가 놀자놀자 친구들을
+            버리고 야스하러 감.
+          </Typography>
         </Collapse>
       </Collapse>
       <Typography variant="title">
@@ -67,6 +86,8 @@ const IndexPage = ({ data }) => {
     </Container>
   );
 };
+
+const CustomIndexWrapper = styled(Box)``;
 
 export const data = graphql`
   query {
