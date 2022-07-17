@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Box, Breadcrumbs } from '@mui/material';
 import TagLink from '../TagLink';
+import TopTagLink from '../TopTagLink';
 
 const ProfileBox = ({ url }) => {
   return (
@@ -97,7 +98,12 @@ const ProfileBox = ({ url }) => {
           <strong>별명</strong>
         </ProfileBoxContent>
         <ProfileBoxContent className="border">
-          노게이, 차은우, 박보검, 송강
+          노게이<TopTagLink>[1]</TopTagLink>
+          <TopTagLink>[2]</TopTagLink>
+          <TopTagLink>[3]</TopTagLink>
+          <TopTagLink>[4]</TopTagLink>
+          <TopTagLink>[5]</TopTagLink>
+          <TopTagLink>[6]</TopTagLink>, 차은우, 박보검, 송강
         </ProfileBoxContent>
       </ProfileBoxRow>
       {/* <ProfileBoxRow>
