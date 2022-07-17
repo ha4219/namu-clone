@@ -74,7 +74,7 @@ const ProfileBox = ({ url }) => {
           <strong>학력</strong>
         </ProfileBoxContent>
         <ProfileBoxContent className="border">
-          <TagLink href="https://hyunil-e.goept.kr/hyunil-e/main.do">
+          <TagLink href="https://namu.wiki/w/%ED%98%84%EC%9D%BC%EC%B4%88%EB%93%B1%ED%95%99%EA%B5%90">
             현일초등학교
           </TagLink>
           <br />
@@ -82,10 +82,14 @@ const ProfileBox = ({ url }) => {
             안일중학교
           </TagLink>
           <br />
-          <TagLink href="http://www.di.hs.kr/">동일공업고등학교</TagLink>
+          <TagLink href="https://namu.wiki/w/%EB%8F%99%EC%9D%BC%EA%B3%B5%EC%97%85%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90">
+            동일공업고등학교
+          </TagLink>
           <br />
-          <TagLink href="http://www.dima.ac.kr/">동아방송예술대학교</TagLink>
-          <TagLink href="http://www.dima.ac.kr/sub_03/sub_03_06.aspx">
+          <TagLink href="https://namu.wiki/w/%EB%8F%99%EC%95%84%EB%B0%A9%EC%86%A1%EC%98%88%EC%88%A0%EB%8C%80%ED%95%99%EA%B5%90">
+            동아방송예술대학교
+          </TagLink>
+          <TagLink href="https://namu.wiki/w/%EC%98%81%ED%99%94%EC%98%81%EC%83%81%ED%95%99%EA%B3%BC">
             영상제작과
           </TagLink>
 
@@ -115,22 +119,27 @@ const ProfileBox = ({ url }) => {
       </ProfileBoxRow>
       <ProfileBoxRow>
         <ProfileBoxContent colSpan={2} className="border">
-          <Breadcrumbs>
-            <Box>
+          <Breadcrumbs
+            separator="|"
+            sx={{ display: 'flex', justifyContent: 'center', color: '#fff' }}
+          >
+            <Box
+              component="a"
+              href="https://www.youtube.com/channel/UCsyTehrT9OD_-s2jClbsoRw"
+            >
               <img
                 width={20}
+                style={{ verticalAlign: 'middle' }}
                 src="https://w.namu.la/s/0234a4424011b37bad371ec569978fc3fcbea877b1cdff4672890639045092ffe895ff91f17f48e847fe3664866675da272775b5939b11fae30ee70c594f4d63b63802ded06a7675271bc0426bed8c900c6989c70cc19603acc08ffad53f4c2c"
               />
             </Box>
-            <Box>
+            <Box component="a" href="https://www.instagram.com/nhs6040/?hl=en">
               <img
                 width={20}
+                style={{ verticalAlign: 'middle' }}
                 src="https://w.namu.la/s/eef6347d4d73181f644798e66f41e8d401e6456cb6900dc18e2adea3063786d6899111f5402ce000614fd34a4f33f74bc100a3715644e98a3a16d523cc063882f0a431874886c9d1baaf22387efe30a3348f34836ea8c0c919c8ee73dc3e902b"
               />
             </Box>
-            <Box>1</Box>
-            <Box>1</Box>
-            <Box>1</Box>
           </Breadcrumbs>
         </ProfileBoxContent>
       </ProfileBoxRow>
