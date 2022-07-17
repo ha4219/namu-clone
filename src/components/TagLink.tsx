@@ -8,7 +8,7 @@ const TagLink = ({
   children: React.ReactNode;
   href: string;
 }) => (
-  <Link color="secondary" underline="hover" component="a" href={href} px={1}>
+  <Link color="secondary" underline="hover" component="a" href={href} pr={0.5}>
     {children}
   </Link>
 );

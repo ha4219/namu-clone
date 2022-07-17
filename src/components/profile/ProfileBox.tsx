@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Box, Breadcrumbs } from '@mui/material';
+import TagLink from '../TagLink';
 
 const ProfileBox = ({ url }) => {
   return (
@@ -14,7 +15,7 @@ const ProfileBox = ({ url }) => {
       </ProfileBoxRow>
       <ProfileBoxRow>
         <ProfileBoxContent colSpan={2} style={{ padding: 0 }}>
-          <img src={url} />
+          <img src={`/namu-clone${url}`} className="img" />
         </ProfileBoxContent>
       </ProfileBoxRow>
       <ProfileBoxRow>
@@ -28,16 +29,29 @@ const ProfileBox = ({ url }) => {
           <strong>출생</strong>
         </ProfileBoxContent>
         <ProfileBoxContent className="border">
-          1999년 1월 (24세)
+          <TagLink href="https://namu.wiki/w/1999">1999년</TagLink>
+          <TagLink href="https://namu.wiki/w/1%EC%9B%94%2018%EC%9D%BC">
+            1월 18일
+          </TagLink>
+          (24세)
           <br />
-          경기도
+          <TagLink href="https://namu.wiki/w/%EA%B2%BD%EA%B8%B0%EB%8F%84">
+            경기도
+          </TagLink>
         </ProfileBoxContent>
       </ProfileBoxRow>
       <ProfileBoxRow>
         <ProfileBoxContent className="label">
           <strong>거주지</strong>
         </ProfileBoxContent>
-        <ProfileBoxContent className="border">경기도 안성시</ProfileBoxContent>
+        <ProfileBoxContent className="border">
+          <TagLink href="https://namu.wiki/w/%EA%B2%BD%EA%B8%B0%EB%8F%84">
+            경기도
+          </TagLink>
+          <TagLink href="https://namu.wiki/w/%EC%95%88%EC%84%B1%EC%8B%9C">
+            안성시
+          </TagLink>
+        </ProfileBoxContent>
       </ProfileBoxRow>
       <ProfileBoxRow>
         <ProfileBoxContent className="label">
@@ -52,21 +66,39 @@ const ProfileBox = ({ url }) => {
           <strong>학력</strong>
         </ProfileBoxContent>
         <ProfileBoxContent className="border">
-          현일초등학교
+          <TagLink href="https://hyunil-e.goept.kr/hyunil-e/main.do">
+            현일초등학교
+          </TagLink>
           <br />
-          안일중학교
+          <TagLink href="https://anil-m.goept.kr/anil-m/main.do">
+            안일중학교
+          </TagLink>
           <br />
-          동일공업고등학교
+          <TagLink href="http://www.di.hs.kr/">동일공업고등학교</TagLink>
           <br />
-          동아방송예술대학교
+          <TagLink href="http://www.dima.ac.kr/">동아방송예술대학교</TagLink>
+          <TagLink href="http://www.dima.ac.kr/sub_03/sub_03_06.aspx">
+            영상제작과
+          </TagLink>
+
           <br />
+        </ProfileBoxContent>
+      </ProfileBoxRow>
+      <ProfileBoxRow>
+        <ProfileBoxContent className="label">
+          <strong>MBTI</strong>
+        </ProfileBoxContent>
+        <ProfileBoxContent className="border">
+          <TagLink href="https://namu.wiki/w/INFP">INFP</TagLink>
         </ProfileBoxContent>
       </ProfileBoxRow>
       <ProfileBoxRow>
         <ProfileBoxContent className="label">
           <strong>별명</strong>
         </ProfileBoxContent>
-        <ProfileBoxContent className="border">노게이</ProfileBoxContent>
+        <ProfileBoxContent className="border">
+          노게이, 차은우, 박보검, 송강
+        </ProfileBoxContent>
       </ProfileBoxRow>
       {/* <ProfileBoxRow>
         <ProfileBoxContent colSpan={2} className="border">
@@ -86,6 +118,7 @@ const ProfileBox = ({ url }) => {
 const ProfileBoxWrapper = styled.table`
   border-spacing: 0;
   color: #ffffff;
+  width: 100%;
   border: ${({ theme }) => `2px solid ${theme.palette.third.main}`};
 
   & .center {
@@ -107,10 +140,18 @@ const ProfileBoxWrapper = styled.table`
     border-top: 1px solid #383b40;
     background-color: ${({ theme }) => theme.palette.third.main};
   }
+
+  & .img {
+    width: 100%;
+    object-fit: cover;
+  }
 `;
-const ProfileBoxRow = styled.tr``;
+const ProfileBoxRow = styled.tr`
+  border-color: ${({ theme }) => theme.palette.third.main};
+`;
 const ProfileBoxContent = styled.td`
   padding: 0;
+  border-color: ${({ theme }) => theme.palette.third.main};
 
   padding: 5px 10px;
 `;

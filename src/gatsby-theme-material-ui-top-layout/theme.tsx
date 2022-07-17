@@ -6,12 +6,14 @@ declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
     content: true;
     title: true;
+    titleSub: true;
   }
 }
 
 interface ExtendedTypographyOptions extends TypographyOptions {
   content: React.CSSProperties;
   title: React.CSSProperties;
+  titleSub: React.CSSProperties;
 }
 
 // A custom theme for this app
@@ -38,6 +40,17 @@ const baseTheme = createTheme({
       margin: '1.2em 0 0.8em',
       paddingBottom: '5px',
       fontSize: '1.8em',
+      cursor: 'pointer',
+      fontWeight: 'bold',
+      color: '#ddd',
+      borderBottomColor: '#383b40',
+    },
+    titleSub: {
+      display: 'block',
+      borderBottom: '1px solid #ccc',
+      margin: '1.2em 0 0.8em',
+      paddingBottom: '5px',
+      fontSize: '1.6em',
       cursor: 'pointer',
       fontWeight: 'bold',
       color: '#ddd',
