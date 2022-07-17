@@ -9,6 +9,7 @@ import {
 import * as React from 'react';
 import CustomLink from '../components/CustomLink';
 import TopTagLink from '../components/TopTagLink';
+import CenterTagLink from '../components/CenterTagLink';
 import TagLink from '../components/TagLink';
 import ProfileBox from '../components/profile/ProfileBox';
 import { graphql } from 'gatsby';
@@ -40,7 +41,7 @@ const IndexPage = ({ data }) => {
           놀자놀자 원탑, 노상철 그는 사람인가?
         </Typography>
       </Collapse>
-      <Typography variant="title">
+      <Typography variant="title" sx={{ marginBottom: 0 }}>
         <TagLink href="#2">2.</TagLink>
         사건 사고
       </Typography>
@@ -81,7 +82,32 @@ const IndexPage = ({ data }) => {
         여담
       </Typography>
       <Collapse in={true}>
-        <Typography variant="content"></Typography>
+        <Typography variant="content">
+          <Box py={0.5}>
+            <CenterTagLink>[1]</CenterTagLink>
+            노상철 게이
+          </Box>
+          <Box py={0.5}>
+            <CenterTagLink>[2]</CenterTagLink>
+            노상철 게이
+          </Box>
+          <Box py={0.5}>
+            <CenterTagLink>[3]</CenterTagLink>
+            노상철 게이
+          </Box>
+          <Box py={0.5}>
+            <CenterTagLink>[4]</CenterTagLink>
+            노상철 게이
+          </Box>
+          <Box py={0.5}>
+            <CenterTagLink>[5]</CenterTagLink>
+            노상철 게이
+          </Box>
+          <Box py={0.5}>
+            <CenterTagLink>[6]</CenterTagLink>
+            노상철 게이
+          </Box>
+        </Typography>
       </Collapse>
     </Container>
   );
