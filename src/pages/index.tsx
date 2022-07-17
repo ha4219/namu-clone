@@ -37,7 +37,10 @@ const IndexPage = ({ data }) => {
           게이설
         </Typography>
         <Collapse in={true}>
-          <Typography variant="content">123123</Typography>
+          <Typography variant="content">
+            2015년 중학교 2학년 시절 영어 교과서에서 지문으로 텐징
+            노르상철이라고 실림.
+          </Typography>
         </Collapse>
         <Typography variant="titleSub">
           <TagLink href="#2.2">2.2.</TagLink>
