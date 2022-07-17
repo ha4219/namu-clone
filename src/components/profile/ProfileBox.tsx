@@ -59,7 +59,14 @@ const ProfileBox = ({ url }) => {
           <strong>병역</strong>
         </ProfileBoxContent>
         <ProfileBoxContent className="border">
-          대한민국 육군 병장 만기전역
+          <img
+            width={24}
+            style={{ marginRight: 3, verticalAlign: 'middle' }}
+            src="https://w.namu.la/s/948050864baba836bbc7384af3845adfc59df07821f315feb63201a03ff7d3e2e40cdf682e41fe81cde623d4e7b9e31275fe8cfeee3067b0ba3b4a7dd7d4f0959575a394bd070808bba94aebfe527e8ddbf6d47d3f7680f365093a30d0f67706"
+          />
+          <TagLink href="#">대한민국 육군</TagLink>
+          <TagLink href="#">병장</TagLink>
+          만기전역
         </ProfileBoxContent>
       </ProfileBoxRow>
       <ProfileBoxRow>
@@ -106,17 +113,27 @@ const ProfileBox = ({ url }) => {
           <TopTagLink>[6]</TopTagLink>, 차은우, 박보검, 송강
         </ProfileBoxContent>
       </ProfileBoxRow>
-      {/* <ProfileBoxRow>
+      <ProfileBoxRow>
         <ProfileBoxContent colSpan={2} className="border">
           <Breadcrumbs>
-            <Box>1</Box>
-            <Box>1</Box>
+            <Box>
+              <img
+                width={20}
+                src="https://w.namu.la/s/0234a4424011b37bad371ec569978fc3fcbea877b1cdff4672890639045092ffe895ff91f17f48e847fe3664866675da272775b5939b11fae30ee70c594f4d63b63802ded06a7675271bc0426bed8c900c6989c70cc19603acc08ffad53f4c2c"
+              />
+            </Box>
+            <Box>
+              <img
+                width={20}
+                src="https://w.namu.la/s/eef6347d4d73181f644798e66f41e8d401e6456cb6900dc18e2adea3063786d6899111f5402ce000614fd34a4f33f74bc100a3715644e98a3a16d523cc063882f0a431874886c9d1baaf22387efe30a3348f34836ea8c0c919c8ee73dc3e902b"
+              />
+            </Box>
             <Box>1</Box>
             <Box>1</Box>
             <Box>1</Box>
           </Breadcrumbs>
         </ProfileBoxContent>
-      </ProfileBoxRow> */}
+      </ProfileBoxRow>
     </ProfileBoxWrapper>
   );
 };
